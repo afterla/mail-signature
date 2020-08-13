@@ -23,15 +23,17 @@
 			font-weight: inherit !important;
 			line-height: inherit !important;
 		}
-		.column-custom tbody {
-			display: table;
-			width: 100%;
+		a:-webkit-any-link {
+			text-decoration: none!important;
 		}
-		.dark-img {
-			display: none!important;
+		u + #body a,
+		.ii a[href],
+		.gt a {
+			text-decoration: none !important;
 		}
-		.light-img {
-			display:inline !important;
+		h4 a {
+			color: inherit !important;
+            text-decoration: none !important;
 		}
 		@media screen and (max-width: 480px) {
 			.two-column .column,
@@ -61,27 +63,17 @@
 			}
 		}
 		@media (prefers-color-scheme: dark ) {
-			/* Shows Dark Mode-Only Content, Like Images */
-			.dark-img {
-				display:inline !important;
-				overflow: visible !important;
-				float: none !important;
-				max-height:inherit !important;
-				max-width:inherit !important;
-				line-height: auto !important;
-				visibility:inherit !important;
+			.lightimage {
+				display: none !important;
 			}
-			/* Hides Light Mode-Only Content, Like Images */
-			.light-img {
-				display:none;
-				display:none !important;
+			.darkimageWrapper,
+			.darkimage {
+				display: inline-block !important;
 			}
-			/* Custom Dark Mode Background Color */
 			.darkmode {
 				background-color: #000000 !important;
 			}
-			/* Custom Dark Mode Font Colors */
-			h1, h2, p, span, a, b, tr, td {
+			h1, h2, h3, h4, h5, p, span, a, b, tr, td {
 				color: #999999 !important;
 			}
 			.txt-mobile {
@@ -89,30 +81,52 @@
 			}
 		}
 		/* Add this styling for support in Outlook */
-		[data-ogsc] .dark-img {
-			display:inline !important;
-			overflow: visible !important;
-			float: none !important;
-			max-height:inherit !important;
-			max-width:inherit !important;
-			line-height: auto !important;
-			visibility:inherit !important;
+		[data-ogsc] .lightimage {
+			display: none !important;
 		}
-		[data-ogsc] .light-img {
-			display:none;
-			display:none !important;
+		[data-ogsc] .darkimageWrapper,
+		[data-ogsc] .darkimage {
+			display: inline-block !important;
 		}
 		[data-ogsc] .darkmode {
 			background-color: #000000 !important;
 		}
 		[data-ogsc] h1,
 		[data-ogsc] h2,
+		[data-ogsc] h3,
+		[data-ogsc] h4,
+		[data-ogsc] h5,
 		[data-ogsc] p,
 		[data-ogsc] span,
 		[data-ogsc] a,
 		[data-ogsc] b,
+		[data-ogsc] tr,
+		[data-ogsc] td,
 		[data-ogsc] .txt-mobile {
 			color: #ffffff !important;
+		}
+		@media all and (max-width:639px){ 
+			.wrapper {
+				width: 100%!important;
+				padding: 0 !important;
+			}
+			.container {
+				width:100%!important;
+				padding: 0 !important;
+			}
+			.mobile {
+				width: 100%!important;
+				display: block!important;
+				padding-bottom: 5px;
+			}
+			*[class="mobileOff"] {
+				width: 0px !important;
+				display: none !important;
+			}
+			*[class*="mobileOn"] {
+				display: block !important;
+				max-height:none !important;
+			}
 		}
 	</style>
 	<!--[if (gte mso 9)|(IE)]>
@@ -121,12 +135,12 @@
 	</style>
 	<![endif]-->
 </head>
-<body style="margin:0 auto;">
+<body id="body" style="margin:0 auto;">
 	<table align="center" width="100%" bgcolor="#ffffff" style="max-width:600px;" border="0" cellspacing="0" cellpadding="0" >
 		<tr>
 			<td align="center" style="padding-top:20px;padding-right:0;padding-bottom:10px;padding-left:10px;" >
 				<a href="http://after.la/" target="_blank" border="0" style="text-decoration:none; display: table;margin: 0 auto 0 0;" >
-					<img src="img/logo-after.png" alt="After" width="127" border="0" style="max-width:127px;height:auto;display:block; margin: 0 auto 0 0;" />
+					<img src="https://raw.githubusercontent.com/afterla/mail-signature/master/img/logo-after.png" alt="After" width="127" border="0" style="max-width:127px;height:auto;display:block; margin: 0 auto 0 0;" />
 				</a>
 			</td>
 		</tr>
@@ -144,120 +158,61 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="two-column" align="center" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;text-align:center;font-size:0;" >
-				<table class="column" width="100%" style="max-width:220px;display:inline-block;" valign="top" border="0" cellspacing="0" cellpadding="0" >
+			<td align="left" valign="top">
+				<table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF">
 					<tr>
-						<td style="padding-top:10px;padding-right:10px;padding-bottom:0;padding-left:10px;" >
-							<table width="100%" border="0" cellspacing="0" cellpadding="0">
-								<tr>
-									<td class="two-column" align="center" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;text-align:center;font-size:0;">
-										<table class="column" width="100%" style="max-width:50%;display:inline-block;" valign="top" border="0" cellspacing="0" cellpadding="0" >
-											<tr>
-												<td style="padding-top: 0; padding-right: 40px; padding-left: 0;" >
-													<table width="100%" border="0" cellspacing="0" cellpadding="0">
-														<tr>
-															<td style="padding-top:0;padding-right:0;padding-bottom:10px;padding-left:0;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#666666;text-align:left;" >
-																info@after.com
-															</td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</table>
-										<table class="column" width="100%" style="max-width:50%;display:inline-block;" valign="top" border="0" cellspacing="0" cellpadding="0" >
-											<tr>
-												<td style="padding:0;" >
-													<table width="100%" border="0" cellspacing="0" cellpadding="0">
-														<tr>
-															<td style="padding-top:0;padding-right:0;padding-bottom:10px;padding-left:0;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#666666;text-align:left;" >
-																+51 951665761
-															</td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-				</table>
-				<table class="column column-custom" width="100%" style="max-width:380px;display:inline-block;" valign="top" border="0" cellspacing="0" cellpadding="0" >
-					<tr>
-						<td style="padding-top:13px;padding-right:10px;padding-bottom:0;padding-left:10px;" >
-							<table width="100%" border="0" cellspacing="0" cellpadding="0" >
-								<td class="four-column" align="center" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;text-align:center;font-size:0;">
-									<table class="column" width="100%" style="max-width:25%;display:inline-block;" valign="top" border="0" cellspacing="0" cellpadding="0" >
+					  <td align="left" valign="top">
+						<table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+							<tr>
+								<td width="250" class="mobile" align="left" valign="top" style="display: inline-block;">
+									<h4 style="display:inline;margin: 0;font-weight:400;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#666666;text-align:left;padding-right: 15px;padding-left: 10px;">
+										<span style="color:#666666!important;text-decoration: none!important;">info@after.com</span>
+									</h4>
+									<h4 style="display:inline;margin: 0;font-weight:400;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#666666;text-align:right;">
+										<span style="color:#666666!important;text-decoration: none!important;">+51 951665761</span>
+									</h4>
+								</td>
+								<td width="350" class="mobile" align="left" valign="top">
+									<table width="400" cellpadding="0" cellspacing="0" border="0" class="container">
 										<tr>
-											<td style="padding: 0;" >
-												<table width="100%" border="0" cellspacing="0" cellpadding="0">
-													<tr>
-														<td style="padding-top:0;padding-right:0;padding-bottom:5px;padding-left:0;font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:16px;color:#276EF1;text-align:left;" >
-															<a href="http://after.la/" target="_blank" border="0" style="color:#276EF1;text-decoration:none; display: inline-block;" >
-																<img src="img/icono-circle.png" alt="Circle" width="5" border="0" style="max-width:5px;height:5px; line-height: 5px;margin-bottom: 3px;" />
-																<img class="dark-img" src="img/icono-instagram-light.png" alt="Instagram" width="10" border="0" style="max-width:10px;height:auto;" />
-																<img class="light-img" src="img/icono-instagram.png" alt="Instagram" width="10" border="0" style="max-width:10px;height:auto;" />
-																<span class="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#276EF1;text-align:left; text-decoration: none;">instagram</span>
-															</a>
-														</td>
-													</tr>
-												</table>
+											<td width="25%" class="mobile" align="left" valign="top">
+												<a href="http://after.la/" target="_blank" border="0" style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#276EF1;text-decoration:none; display: inline-block;margin-left: 10px;" >
+													<img src="https://raw.githubusercontent.com/afterla/mail-signature/master/img/icono-instagram.png" width="10" height="auto" style="display: inline-block; height: auto;" class="lightimage">
+													<div class="darkimageWrapper" style="mso-hide: all; display: none">
+														<img src="https://raw.githubusercontent.com/afterla/mail-signature/master/img/icono-instagram-light.png" width="10" class="darkimage" style="display: none;">
+													</div>
+													<span class="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#276EF1;text-align:left; text-decoration: none;">instagram</span>
+												</a>
 											</td>
-										</tr>
-									</table>
-									<table class="column" width="100%" style="max-width:25%;display:inline-block;" valign="top" border="0" cellspacing="0" cellpadding="0" >
-										<tr>
-											<td style="padding: 0;" >
-												<table width="100%" border="0" cellspacing="0" cellpadding="0">
-													<tr>
-														<td style="padding-top:0;padding-right:0;padding-bottom:5px;padding-left:0;font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:16px;color:#276EF1;text-align:left;" >
-															<a href="http://after.la/" target="_blank" border="0" style="color:#276EF1;text-decoration:none; display: inline-block;" >
-																<img class="dark-img" src="img/icono-facebook-light.png" alt="Facebook" width="10" border="0" style="max-width:10px;height:auto;" />
-																<img class="light-img" src="img/icono-facebook.png" alt="Facebook" width="10" border="0" style="max-width:10px;height:auto;" />
-																<span class="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#276EF1;text-align:left; text-decoration: none;">facebook</span>
-															</a>
-														</td>
-													</tr>
-												</table>
+											<td width="25%" class="mobile" align="left" valign="top">
+												<a href="http://after.la/" target="_blank" border="0" style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#276EF1;text-decoration:none; display: inline-block;margin-left: 10px;" >
+													<img src="https://raw.githubusercontent.com/afterla/mail-signature/master/img/icono-facebook.png" width="10" height="auto" style="display: inline-block; height: auto;" class="lightimage">
+													<div class="darkimageWrapper" style="mso-hide: all; display: none">
+														<img src="https://raw.githubusercontent.com/afterla/mail-signature/master/img/icono-facebook-light.png" width="10" class="darkimage" style="display: none;">
+													</div>
+													<span class="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#276EF1;text-align:left; text-decoration: none;">facebook</span>
+												</a>
 											</td>
-										</tr>
-									</table>
-									<table class="column" width="100%" style="max-width:25%;display:inline-block;" valign="top" border="0" cellspacing="0" cellpadding="0" >
-										<tr>
-											<td style="padding: 0;" >
-												<table width="100%" border="0" cellspacing="0" cellpadding="0">
-													<tr>
-														<td style="padding-top:0;padding-right:0;padding-bottom:5px;padding-left:0;font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:16px;color:#276EF1;text-align:left;" >
-															<a href="http://after.la/" target="_blank" border="0" style="color:#276EF1;text-decoration:none; display: inline-block;" >
-																<img class="dark-img" src="img/icono-linkedin-light.png" alt="Linkedin" width="10" border="0" style="max-width:10px;height:auto;" />
-																<img class="light-img" src="img/icono-linkedin.png" alt="Linkedin" width="10" border="0" style="max-width:10px;height:auto;" />
-																<span class="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#276EF1;text-align:left; text-decoration: none;">linkedin</span>
-															</a>
-														</td>
-													</tr>
-												</table>
+											<td width="25%" class="mobile" align="left" valign="top">
+												<a href="http://after.la/" target="_blank" border="0" style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#276EF1;text-decoration:none; display: inline-block;margin-left: 10px;" >
+													<img src="https://raw.githubusercontent.com/afterla/mail-signature/master/img/icono-linkedin.png" width="10" height="auto" style="display: inline-block; height: auto;" class="lightimage">
+													<div class="darkimageWrapper" style="mso-hide: all; display: none">
+														<img src="https://raw.githubusercontent.com/afterla/mail-signature/master/img/icono-linkedin-light.png" width="10" class="darkimage" style="display: none;">
+													</div>
+													<span class="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#276EF1;text-align:left; text-decoration: none;">linkedin</span>
+												</a>
 											</td>
-										</tr>
-									</table>
-									<table class="column" width="100%" style="max-width:25%;display:inline-block;" valign="top" border="0" cellspacing="0" cellpadding="0" >
-										<tr>
-											<td style="padding: 0;" >
-												<table width="100%" border="0" cellspacing="0" cellpadding="0">
-													<tr>
-														<td style="padding-top:0;padding-right:0;padding-bottom:5px;padding-left:0;font-family:Helvetica,Arial,sans-serif;font-size:13px;font-weight:bold;line-height:16px;color:#276EF1;text-align:left;" >
-															<a href="http://after.la/" target="_blank" border="0" style="color:#276EF1;text-decoration:none; display: inline-block;font-weight:bold;" >
-																<span class="font-family:Helvetica,Arial,sans-serif;font-weight:bold;font-size:13px;color:#276EF1;text-align:left; text-decoration: none;">after.la</span>
-															</a>
-														</td>
-													</tr>
-												</table>
+											<td width="25%" class="mobile" align="left" valign="top">
+												<a href="http://after.la/" target="_blank" border="0" style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#276EF1;text-decoration:none; display: inline-block; font-weight: bold;margin-left: 10px;" >
+													<span class="font-family:Helvetica,Arial,sans-serif;font-weight:bold;font-size:13px;color:#276EF1;text-align:left; text-decoration: none; font-weight: bold">after.la</span>
+												</a>
 											</td>
 										</tr>
 									</table>
 								</td>
-							</table>
-						</td>
+							</tr>
+						</table>
+					  </td>
 					</tr>
 				</table>
 			</td>
@@ -267,7 +222,7 @@
 		</tr>
 		<tr>
 			<td align="center" style="padding-top:0;padding-right:10px;padding-bottom:0;padding-left:10px;" >
-				<img src="img/banner-after.png" alt="After" width="127" border="0" style="width:100%;max-width:100%;height:auto;display:block;" />
+				<img src="https://raw.githubusercontent.com/afterla/mail-signature/master/img/banner-after.png" alt="After" width="127" border="0" style="width:100%;max-width:100%;height:auto;display:block;" />
 			</td>
 		</tr>
 		<tr>
